@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-witdh, initial-scale=1.0">
+        <title>Nur Muhammad Faza</title>
+        <link rel="icon" href="images/FAZ.png">
+        <link rel="stylesheet" href="CSS/webprof.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+                <nav>
+                    <h1 class="code">FAZ</h1>
+                    <ul id="sidemenu"> 
+                        <li ><a class="navbar" href="#header">Home</a></li>
+                        <li ><a class="navbar" href="#about">About</a></li>
+                        <li ><a class="navbar" href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            
+            <div class="header-text animate__animated animate__fadeInUp">
+                <p>Hello There!</p>
+                <h1>I'm<br>Nur Muhammad <span>Faza</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/FAZ.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi!, My name is Nur Muhammad Faza Dwi Fajar Ramdhani, usually called Faza. Born in Kebumen on 15 November 2003.
+                        Currently studying Bachelor of Engineering Physics, Telkom University. I have an interest in IT and its various advances.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('language')">Language</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span></li>
+                            <li><span>Algorithms</span></li>
+                            <li><span>Tutoring</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Practicum Assistant</span><img src="images/daskom.png" class="daskom"><br>Teaching and Tutoring
+                            at Basic Computer Laboratory, Telkom University </li>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019</span><br>State High School 7 Purworejo</li>
+                            <li><span>2022-2026 (Aamiin)</span><br>Engineering Physics, Telkom University</li>
+                        </ul>
+                    </div>
+                    <div class="logo-container">
+                        <div class="tab-contents animate__fadeInDown" id="language">
+                            <img src="images/Flag_of_Indonesia.png" class="animated-img indo" alt="INDONESIAN">
+                            <img src="images/English_language.png" class="animated-img eng" alt="ENGLISH">
+                            <img src="images/C-Lang.png" class="animated-img c" alt="C">
+                            <img src="images/JS-Lang.png" class="animated-img js" alt="JavaScript">
+                            <img src="images/Python.png" class="animated-img python" alt="Python">
+                            <!-- Add other images with respective classes and smoother keyframe animations -->
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me!</h1>
+                    <p><i class="fa-regular fa-envelope"></i>fazafajar69@gmail.com</p>
+                    <div class="social-icons">
+                        <a class="facebook" href="https://facebook.com/fxfyfaza" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="instagram" href="https://instagram.com/fxfyfaza" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="linkedin" href="https://linkedin.com/in/fazafajarr" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a class="github" href="https://github.com/fxfyfaza" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet"> 
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Faza</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('a[href="#header"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+        document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('a[href="#about"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-300px";
+        }
+        document.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    var body = document.querySelector('body');
+    
+    if (scrollPosition > 50) {
+        body.classList.add('scrolled');
+    } else {
+        body.classList.remove('scrolled');
+    }
+});
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz0wMRF0crMj1oxwdXd4VqFFPmAzjxS8im96v2q9DBNLqLPUqttPyUpy-11NjBKUNSc/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <style>
+
+
+      </style>
+    </body>
+</html>
